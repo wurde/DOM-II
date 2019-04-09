@@ -21,3 +21,14 @@ boxes.forEach(box => {
     boxes_container.prepend(event.currentTarget)
   })
 })
+
+/**
+ * Blocks should move right on mousedown.
+ */
+
+boxes.forEach(box => {
+  box.addEventListener('mousedown', event => {
+    let current_margin = Number.parseInt(event.currentTarget.style.marginLeft) || 0
+    event.currentTarget.style.marginLeft = `${current_margin + 50}px`
+  })
+})
