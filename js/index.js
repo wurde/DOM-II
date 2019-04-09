@@ -47,3 +47,25 @@ links.forEach(link => {
     link.style.border = "none"
   })
 })
+
+/**
+ * Q: Why doesnt resize fire for textarea?
+ */
+
+/**
+ * Add scroll handler
+ */
+
+let do_this_once = false
+window.addEventListener('scroll', (event) => {
+  if (do_this_once === false && event.timeStamp >= 5000) {
+    alert("Can you give us money?")
+    do_this_once = true
+  }
+})
+
+// This works too:
+// let textarea = document.getElementById('story')
+// textarea.addEventListener('scroll', (event) => {
+//   console.log(event)
+// })
