@@ -30,6 +30,20 @@ nav_about_us.addEventListener("keydown", event => {
 })
 
 /**
+ * Add wheel handler
+ */
+
+let nav_blog = document.querySelector("header.main-navigation nav a:nth-child(3)")
+
+nav_blog.addEventListener("wheel", event => {
+  if (event.pageY > 340) {
+    event.currentTarget.style.background = "red"
+  } else {
+    event.currentTarget.style.background = ""
+  }
+})
+
+/**
  * Add drag/drop handler.
  */
 
