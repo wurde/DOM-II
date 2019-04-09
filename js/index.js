@@ -58,6 +58,14 @@ nav_contact.addEventListener("drag", event => {
 })
 
 /**
+ * Add load handler.
+ */
+
+window.addEventListener("load", event => {
+  alert(`This page took ${Math.floor(event.timeStamp)} milliseconds to load.`)
+})
+
+/**
  * Add focus handler.
  */
 
