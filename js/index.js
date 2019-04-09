@@ -2,8 +2,8 @@
  * Locals
  */
 
-let links = document.querySelectorAll('.nav-link')
-links = Array.from(links)
+let links = Array.from(document.querySelectorAll('.nav-link'))
+let body = document.querySelector('body')
 
 /**
  * Add mouseover handler
@@ -81,8 +81,18 @@ links.forEach(link => {
 })
 
 /**
+ * Add resize handler
  * Q: Why doesnt resize fire for textarea?
  */
+
+window.addEventListener("resize", event => {
+  console.log("event.target.innerWidth", event.target.innerWidth)
+  if (event.target.innerWidth <= 500) {
+    body.style.backgroundColor = "#566573"
+  } else {
+    body.style.backgroundColor = ""
+  }
+})
 
 /**
  * Add scroll handler
