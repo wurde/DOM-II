@@ -84,3 +84,20 @@ logo_heading.addEventListener("dblclick", event => {
     logo_heading.textContent = original_text
   }, 3000)
 })
+
+/**
+ * Nest two similar events
+ */
+
+const img_fun = document.getElementById('img-fun')
+const section_fun = document.getElementById('section-fun')
+
+img_fun.addEventListener('mouseover', event => {
+  event.stopPropagation()
+  console.log(`Image: ${event}`)
+  alert("Image fun!")
+})
+section_fun.addEventListener('mouseover', event => {
+  console.log(`Section: ${event}`)
+  alert("Section fun!")
+})
