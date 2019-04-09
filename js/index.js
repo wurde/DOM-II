@@ -5,6 +5,16 @@
 let links = document.querySelectorAll('.nav-link')
 links = Array.from(links)
 
+/**
+ * Add mouseover handler
+ */
+
+const img_fun_bus = document.getElementById("img-fun-bus");
+
+img_fun_bus.addEventListener("mouseover", event => {
+  event.target.style.opacity = "0.8"
+  setTimeout(() => { event.target.style.opacity = "1" }, 300);
+})
 
 /**
  * Change "About us" link to blue.
