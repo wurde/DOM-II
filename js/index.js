@@ -9,3 +9,19 @@ let nav_about_us = document.querySelector("header.main-navigation nav a:nth-chil
 nav_about_us.addEventListener("keydown", (event) => {
   event.target.style.color = "blue"
 })
+
+/**
+ * Add drag/drop handler.
+ */
+
+let links = document.querySelectorAll('.nav-link')
+links = Array.from(links)
+let nav_contact = document.querySelector("header.main-navigation nav a:last-child")
+
+nav_contact.addEventListener("drag", (event) => {
+  if (event.screenX < 500) {
+    links.forEach(link => link.style.color = 'orange')
+  } else {
+    links.forEach(link => link.style.color = 'blue')
+  }
+})
