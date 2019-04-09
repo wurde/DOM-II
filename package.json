@@ -4,7 +4,7 @@
   "description": "Fun Bus wants you to make their site more interactive. They are relying on you to provide 10 unique events to enhance their site. Explore the many events available to you by using the [MDN events reference](https://developer.mozilla.org/en-US/docs/Web/Events).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "live-server index.html"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/wurde/DOM-II/issues"
   },
-  "homepage": "https://github.com/wurde/DOM-II#readme"
+  "homepage": "https://github.com/wurde/DOM-II#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
