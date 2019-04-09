@@ -9,11 +9,11 @@ let body = document.querySelector('body')
  * Add mouseover handler
  */
 
-const img_fun_bus = document.getElementById("img-fun-bus");
+const img_fun_bus = document.getElementById("img-fun-bus")
 
 img_fun_bus.addEventListener("mouseover", event => {
   event.target.style.opacity = "0.8"
-  setTimeout(() => { event.target.style.opacity = "1" }, 300);
+  setTimeout(() => { event.target.style.opacity = "1" }, 300)
 })
 
 /**
@@ -142,4 +142,23 @@ img_fun.addEventListener('mouseover', event => {
 section_fun.addEventListener('mouseover', event => {
   console.log(`Section: ${event}`)
   alert("Section fun!")
+})
+
+/**
+ * Add select handler
+ */
+
+let feedback = document.getElementById('input-feedback')
+feedback.addEventListener("select", event => {
+  feedback.setAttribute("placeholder", "Give us more feedback.")
+})
+
+/**
+ * Prevent click event on navigation
+ */
+
+links.forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault()
+  })
 })
